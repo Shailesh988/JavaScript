@@ -1,0 +1,37 @@
+<html>
+<head>
+  <style>
+  .shailesh{
+    border: 5px outset red;
+    background-color: lightblue;
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+  <div class="shailesh">
+    <h1> this is my first JavaScript form</h1>
+</div>
+<table border="2">
+  <form method="post" name="myForm" onsubmit="validateForm(event.preventDefault())">
+    <tr>
+      <td> Name </td>
+  <td><input type="text" name="fname"> <br></td>
+</tr>
+<tr>
+  <td> password</td>
+  <td><input type="password" Name="password"> <br></td>
+</tr>
+</table>
+<button id="click">click me </button>
+</form>
+</body>
+<script>
+function validateForm(){
+
+  const name = document.forms["myForm"]["fname"].value;
+  let pass = document.forms["myForm"]["password"].value;
+  console.log(name,pass);
+}
+</script>
+</html>
