@@ -123,6 +123,8 @@ deleteNode(root, value) {
     }
     root.value = this.min(root.right);
     root.right = this.deleteNode(root.right, root.value);
+    root.value = this.max(root.left);
+    root.left = this.deleteNode(root.left,root.value);
   }
   return root;
   }
